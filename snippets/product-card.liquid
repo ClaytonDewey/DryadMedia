@@ -4,7 +4,7 @@
     <a href="{{ product_product.url }}">
       {% if product_product.featured_image %}
         <div class="h-80 overflow-hidden">
-          <img src="{{ product_product.featured_image | image_url }}" width="{{ product_product.featured_image.width }}" height="{{ product_product.featured_image.height }}" alt="{{ product_product.featured_image.alt }}" class="w-full h-full object-cover" />
+          <img src="{{ product_product.featured_image | image_url }}" width="{{ product_product.featured_image.width }}" height="{{ product_product.featured_image.height }}" alt="{{ product_product.featured_image.alt }}" class="w-full h-full object-cover transition duration-500 ease-in-out hover:scale-105 transform" />
         </div>
       {% else %}
         {{ 'product-1' | placeholder_svg_tag: 'w-full h-full oject-cover bg-gray-100' }}
@@ -12,9 +12,12 @@
     </a>
 
     <div class="flex flex-col p-4">
-      <span class="text-sm text-gray-400">{{ product_product.vendor }}</span>
+      {% if show_vendor %}        
+        <span class="text-sm text-gray-400">{{ product_product.vendor }}</span>
+      {% endif %}
       
       <a href="{{ product_product.url }}" class="text-gray-700 uppercase font-medium">{{ product_product.title }}</a>
+
       <p class="text-gray-500">{{ product_product.price | money }}</p>
     </div>
   </div>
