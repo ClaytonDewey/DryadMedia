@@ -16,7 +16,9 @@
     "contact_form_rxtXra": {
       "type": "contact-form",
       "name": "Contact Form",
-      "settings": {}
+      "settings": {
+        "title": "Contact Us"
+      }
     }
   },
   "order": [
