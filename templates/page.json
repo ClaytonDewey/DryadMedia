@@ -12,9 +12,15 @@
     "template": {
       "type": "template-page",
       "settings": {}
+    },
+    "contact_form_rxtXra": {
+      "type": "contact-form",
+      "name": "Contact Form",
+      "settings": {}
     }
   },
   "order": [
-    "template"
+    "template",
+    "contact_form_rxtXra"
   ]
 }
